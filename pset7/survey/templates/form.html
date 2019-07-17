@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+        <div class="form-group">
+            <input autocomplete="off" autofocus="" class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="position">
+                <option disabled="" selected="" value="">Position</option>
+                <option value="Goalkeeper">Goalkeeper</option>
+                <option value="Defender">Defender</option>
+                <option value="Midfielder">Midfielder</option>
+                <option value="Striker">Striker</option>
+            </select>
+        </div>
+        <div class="form-group">
+            
+                <div class="form-check">
+                    <input class="form-check-input" id="One-time_payment" name="payment" type="radio" value="One-time payment">
+                    <label class="form-check-label" for="One-time_payment">
+                        One-time payment
+                    </label>
+                </div>
+            
+                <div class="form-check">
+                    <input class="form-check-input" id="Split_payment" name="payment" type="radio" value="Split payment">
+                    <label class="form-check-label" for="Split_payment">
+                        Split payment (September - January)
+                    </label>
+                </div>
+            
+                <div class="form-check">
+                    <input class="form-check-input" id="six_month" name="payment" type="radio" value="six_month">
+                    <label class="form-check-label" for="six_month">
+                        6 months loan payment
+                    </label>
+                </div>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="card" placeholder="Card" type="text">
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button onclick="error()" class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+    <br>
+    <img src="static/tenor.gif" alt="Ted Mosby dancing:)">
+
+    <script>
+        function error() { 
+            alert("Please fill all the fields before submitting");
+        }
+    </script>
+
+{% endblock %}
