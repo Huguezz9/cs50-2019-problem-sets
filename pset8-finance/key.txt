@@ -1,0 +1,4 @@
+pk_78eac1ed15c54c6d90b1781c91376478
+
+#insert_user = db.execute("INSERT INTO users (username, hash, email) VALUES (:username, :password, :email)",
+    #username=request.form.get("username"), password=request.form.get("password"), email=request.form.get("email"))
